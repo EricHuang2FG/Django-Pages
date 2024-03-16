@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Current time:</h1>
+
+<div id = "time"></div>
+
+<script>
+    function time() {
+        var time = new Date().toLocaleString();
+        var text = document.getElementById("time");
+        text.textContent = time;
+    }
+    setInterval(time, 1000);
+    time();
+</script>
+
+{% endblock content %}
